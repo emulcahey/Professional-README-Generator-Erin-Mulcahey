@@ -2,14 +2,47 @@
 var inquirer = require('inquirer');
 var fs = require('fs');
 var generateMarkdown = require('./utils/generateMarkdown');
+
 // TODO: Create an array of questions for user input
-const questions = [
-    new Question("What used to be the currency of Italy?",["lira","pesos","forint", "dolar"]),
-    new Question("In what country was pesetas the currency??", ["Spain", "France", "Greece", "Germany"]),
-    new Question("Which country is the largest producer of olive oil?", ["Spain", "France","Greece", "Italy"]),
-    new Question("What is the world s largest office building?", ["Pentagon", "Boieng", "duPortage", "CMG"]),
-    new Question("What is the main component in glass?", ["Sand", "Soil", "Oil", "Wood"], "Sand")
-];
+const questions = [{
+        name: 'title',
+        message: 'What is the title of your project?',
+        response: 'string'
+     }, {
+        name: 'description',
+        message: 'What is the description of your project?',
+        response: 'string'
+     }, {
+        name: 'installation',
+        message: 'What are the installation instructions for your project?',
+        response: 'string'
+    }, {
+        name: 'usage',
+        message: 'What is the usage information for your project?',
+        response: 'string'
+    }, {
+        name: 'contributing',
+        message: 'What are the contribution guidelines for your project?',
+        response: 'string'
+    }, {
+        name: 'tests',
+        message: 'What are the test instructions for your project?',
+        response: 'string'
+    }, {
+        name: 'license',
+        message: 'What license would you like to use?',
+        response: 'list',
+        choices: ['MIT', 'GNU', 'Apache', 'None']
+    }, {
+        name: 'github',
+        message: 'What is your GitHub username?',
+        response: 'string'
+    }, {
+        name: 'email',
+        message: 'What is your email address?',
+        response: 'string'
+    }];
+
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
