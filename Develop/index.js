@@ -34,7 +34,7 @@ const questions = [{
         response: 'list',
         choices: ['MIT', 'GNU', 'Apache', 'None']
     }, {
-        name: 'github',
+        name: 'username',
         message: 'What is your GitHub username?',
         response: 'string'
     }, {
@@ -42,7 +42,6 @@ const questions = [{
         message: 'What is your email address?',
         response: 'string'
     }];
-
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
