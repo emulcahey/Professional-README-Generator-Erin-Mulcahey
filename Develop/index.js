@@ -1,13 +1,31 @@
 // TODO: Include packages needed for this application
-
+var inquirer = require('inquirer');
+var fs = require('fs');
+var generateMarkdown = require('./utils/generateMarkdown');
 // TODO: Create an array of questions for user input
-const questions = [];
+const questions = [
+    new Question("What used to be the currency of Italy?",["lira","pesos","forint", "dolar"]),
+    new Question("In what country was pesetas the currency??", ["Spain", "France", "Greece", "Germany"]),
+    new Question("Which country is the largest producer of olive oil?", ["Spain", "France","Greece", "Italy"]),
+    new Question("What is the world s largest office building?", ["Pentagon", "Boieng", "duPortage", "CMG"]),
+    new Question("What is the main component in glass?", ["Sand", "Soil", "Oil", "Wood"], "Sand")
+];
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
+function writeToFile(fileName, data) {
+    fs.writeFile(fileName, data, (err) => {
+        if(err) throw err;
+        console.log('The file has been saved!');
+    });
+}
 
 // TODO: Create a function to initialize app
-function init() {}
+function init() {
+    inquirer.prompt(questions).then((answers) => {
+        console.log(answers);
+        writeToFile('README.md', generateMarkdown(answers));
+    });
+}
 
 // Function call to initialize app
 init();
