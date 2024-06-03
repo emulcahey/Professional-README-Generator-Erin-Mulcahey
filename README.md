@@ -18,9 +18,10 @@ A user can use this program to help them create a README for their own project. 
 
 To add a screenshot, create an `assets/images` folder in your repository and upload your screenshot to it. Then, using the relative filepath, add it to your README using the following syntax:
 
-    ```md
-    ![alt text](assets/images/screenshot.png)
-    ```
+![Image of the program while answering prompt questions.](Images/answeringQuestions.png)
+![Image of the console log that is logged after completing the questions. It gives back the answers.](Images/consoleLogOfAnswers.png)
+![Image of the folder with the newly created ReadMe.](Images/folderWithReadMe.png)
+![Image of the Preview of the newly created Sample ReadMe.](Images/PreviewOfSampleReadMe.png)
 
 ## Credits
 
