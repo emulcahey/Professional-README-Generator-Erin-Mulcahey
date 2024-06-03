@@ -28,6 +28,7 @@ function renderLicenseLink(license) {
 
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
+// This function will state what license and provide a link to the license
 function renderLicenseSection(license) {
   return `This project uses the license ${license}. ${renderLicenseLink(license)}.`
 }
@@ -63,7 +64,7 @@ ${data.tests}
 ${renderLicenseSection(data.license)}
 
 ## Questions
-Link to my GitHub profile: ${data.username}
+Link to my GitHub profile: [${data.username}](https://github.com/${data.username})
 If you have any questions, please send me an email at: ${data.email}
 `;
 }
