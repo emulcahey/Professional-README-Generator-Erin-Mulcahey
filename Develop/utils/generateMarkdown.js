@@ -64,7 +64,7 @@ ${data.tests}
 ${renderLicenseSection(data.license)}
 
 ## Questions
-Link to my GitHub profile: [${data.username}](https://github.com/${data.username})
+Link to my GitHub profile: [${data.username}](https://github.com/${data.username}). 
 If you have any questions, please send me an email at: ${data.email}
 `;
 }
