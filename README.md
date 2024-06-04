@@ -16,12 +16,12 @@ To use this program, the user will need to:
 
 A user can use this program to help them create a README for their own project. Using this program makes it easier for someone to run through the different parts of a README. Then, once all parts are filled out, it automatically creates a README.md file for them. They can then move the newly created README file to what ever program they created it for.
 
-To add a screenshot, create an `assets/images` folder in your repository and upload your screenshot to it. Then, using the relative filepath, add it to your README using the following syntax:
-
 ![Image of the program while answering prompt questions.](images/answeringQuestions.png)
 ![Image of the console log that is logged after completing the questions. It gives back the answers.](images/consoleLogOfAnswers.png)
 ![Image of the folder with the newly created ReadMe.](images/folderWithReadMe.png)
 ![Image of the Preview of the newly created Sample ReadMe.](images/PreviewOfSampleReadMe.png)
+
+Walkthrough Video: https://drive.google.com/file/d/1KqSgqe5536qWd4OrlE2GvbTndpbemNHj/view
 
 ## Credits
 
